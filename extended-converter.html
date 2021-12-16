@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Ethereum Unit Converter | Ether to Gwei, Wei, Finney, Szabo, Shannon etc.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	</head>
+	<body class="no-sidebar" onload="jsRequired()">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Ethereum Unit Converter</a></h1>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="https://eth-mixer.com">Ethereum Mixer / Tumbler</a></li>
+									<li><a href="/">Simple Converter</a></li>
+									<li class="current"><a href="/extended-converter.html">Extended Converter</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+							<div id="banner">
+							<!-- 	<a target="_blank" href="https://roobet.com/?ref=affiliateref">
+									<img src="assets/img/banner.jpg">
+								</a>
+								Ad -->
+							</div>
+
+							<!-- Content -->
+								<article id="jsmissing">
+								<p>Javascript is required.</p>
+								</article>
+							
+								<article id="jsavailable">
+
+									<h2>Extended Unit Converter</h2>
+									<p>After constantly using a calculator to convert between Ether units i thought it would be a good idea to implement the <a href="https://github.com/ethereumjs/ethereumjs-units">EthereumJS-Units Project</a> on a website for easy accesability.
+									For clarity reasons there is a <a href="/">simple</a> and <a href="/extended-converter.html">full</a> converter page, since the majority wouldn't bother for any other units than Ether, Gwei and Wei.
+									This project is using the <a href="https://github.com/MikeMcl/bignumber.js/">BigNumber</a> library and the <a href="https://github.com/ethereumjs/ethereumjs-units">EthereumJS-Units Project</a>.</p>
+									<div class="row">
+										<div id="unitnamesext" class="3u 6u(medium) 12u$(small)">
+
+											<!-- Links -->
+												<section class="widget links">
+													<ul class="style2">
+														<li><span>Wei <small>(factor: 0)</small></span></li>
+														<li><span>Kwei / Babbage / Femtoether <small>(factor: 3)</small></span></li>
+														<li><span>Mwei / Lovelace / Picoether <small>(factor: 6)</small></span></li>
+														<li><span>Gwei / Shannon / Nanoether / Nano <small>(factor: 9)</small></span></li>
+														<li><span>Szabo / Microether/ Micro <small>(factor: 12)</small></span></li>
+														<li><span>Finney / Milliether / Milli <small>(factor: 15)</small></span></li>
+														<li><span>Ether <small>(factor: 18)</small></span></li>
+														<li><span>Kether / Grand <small>(factor: 21)</small></span></li>
+														<li><span>Mether <small>(factor: 24)</small></span></li>	
+														<li><span>Gether <small>(factor: 27)</small></span></li>
+														<li><span>Tether <small>(factor: 30)</small></span></li>														
+													</ul>
+												</section>
+
+										</div>
+										<div id="unitinput" class="3u 6u$(medium) 12u$(small)">
+
+											<!-- Links -->
+												<section class="widget links">
+													<ul class="style2">
+														<li><input class="inputfield" id="wei" placeholder="Wei" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="kwei" placeholder="Kwei" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="mwei" placeholder="Mwei" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="gwei" placeholder="Gwei" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="szabo" placeholder="Szabo" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="finney" placeholder="Finney" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="ether" placeholder="Ether" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="kether" placeholder="Kether" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="mether" placeholder="Mether" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="gether" placeholder="Gether" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+														<li><input class="inputfield" id="tether" placeholder="Tether" oninput="extendedLengthConverter(this.id,this.value)" onchange="extendedLengthConverter(this.id,this.value)" autocomplete="off" type="number"></li>
+													</ul>
+												</section>
+										</div>
+									</div>
+								</article>
+
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+
+					<footer id="footer" class="container">
+						</div>
+						<div class="row">
+							<div class="12u">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; AVVS Blockchain Technologies</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/bignumber.js"></script>
+			<script src="assets/js/index.js"></script>
+
+
+	</body>
+</html>
